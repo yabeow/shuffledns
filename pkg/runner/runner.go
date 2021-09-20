@@ -181,6 +181,7 @@ func (r *Runner) runMassdns(inputFile string) {
 		TempDir:          r.tempDir,
 		OutputFile:       r.options.Output,
 		MassdnsRaw:       r.options.MassdnsRaw,
+		NoFilterWildcard: r.options.NoFilterWildcard,
 		StrictWildcard:   r.options.StrictWildcard,
 		AllowRoot:        r.options.AllowRoot,
 	})

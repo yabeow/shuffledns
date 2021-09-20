@@ -38,6 +38,8 @@ type Config struct {
 	WildcardsThreads int
 	// MassdnsRaw perform wildcards filtering from an existing massdns output file
 	MassdnsRaw string
+	// NoFilterWildcard will disable wildcard filtering
+	NoFilterWildcard bool
 	// StrictWildcard controls whether the wildcard check should be performed on each result
 	StrictWildcard bool
 	// AllowRoot allows massdns to run as root via --root param

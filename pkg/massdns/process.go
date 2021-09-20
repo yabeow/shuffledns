@@ -64,9 +64,8 @@ func (c *Client) Process() error {
 	}
 
 	gologger.Infof("Massdns output parsing compeleted\n")
-
-	// Perform wildcard filtering only if domain name has been specified
-	if c.config.Domain != "" {
+	// Perform wildcard filtering only if domain name has been specified and --no-filter-wildcard is not set
+	if !c.config.NoFilterWildcard && c.config.Domain != "" {
 		gologger.Infof("Started removing wildcards records\n")
 		err = c.filterWildcards(shstore)
 		if err != nil {
