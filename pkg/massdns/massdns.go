@@ -20,7 +20,7 @@ type Client struct {
 type Config struct {
 	// Domain is the domain specified for enumeration
 	Domain string
-	// Retries is the nmber of retries for dns
+	// Retries is the number of retries for dns
 	Retries int
 	// MassdnsPath is the path to the binary
 	MassdnsPath string
@@ -34,6 +34,8 @@ type Config struct {
 	TempDir string
 	// OutputFile is the file to use for massdns output
 	OutputFile string
+	// Json is format ouput to ndjson format
+	Json bool
 	// WildcardsThreads is the number of wildcards concurrent threads
 	WildcardsThreads int
 	// MassdnsRaw perform wildcards filtering from an existing massdns output file
@@ -44,6 +46,8 @@ type Config struct {
 	StrictWildcard bool
 	// AllowRoot allows massdns to run as root via --root param
 	AllowRoot bool
+	// WildcardOutputFile is the file where the list of wildcards is dumped
+	WildcardOutputFile string
 }
 
 // excellentResolvers contains some resolvers used in dns verification step
