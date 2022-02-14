@@ -1,4 +1,4 @@
-FROM golang:1.14-alpine as build
+FROM golang:1.17.7-alpine as build
 RUN apk --no-cache add git
 RUN go get -u -v github.com/projectdiscovery/shuffledns/cmd/shuffledns; exit 0
 ENV GO111MODULE on
